@@ -1,0 +1,14 @@
+{
+    "servers": [{
+        "host": "0.0.0.0",
+        "port": 8000
+    }],
+    "plugins": {
+        "kappa": {
+            "paths": [
+                "http://couchdb:5984/registry/_design/app/_rewrite/",
+                "https://registry.npmjs.org/"
+            ]
+        }
+    }
+}
