@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curl -X PUT http://couchdb:5984/registry
+npm start --npm-registry-couchapp:couch=http://couchdb:5984/registry
+npm run load --npm-registry-couchapp:couch=http://couchdb:5984/registry
+echo yes | npm run copy --npm-registry-couchapp:couch=http://couchdb:5984/registry
