@@ -6,7 +6,7 @@ docker build -t couchdb ./couchdb
 docker build -t kappa ./kappa
 docker build -t npm-registry-couchapp ./npm-registry-couchapp
 
-docker run -d --name couchdb -p 5984:5984 -v ~/couchdb:/usr/local/var/lib/couchdb couchdb
+docker run -d --name couchdb -p 5984:5984 -v /couchdb:/usr/local/var/lib/couchdb couchdb
 sleep 5;
 couchapp_id=$(docker run -d --link couchdb:couchdb npm-registry-couchapp)
 test $(docker wait $couchapp_id) -eq 0
