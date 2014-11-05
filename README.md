@@ -1,5 +1,5 @@
 ### Private NPM setup
-CouchDB/Kappa dockerized
+CouchDB w/ correct settings & Kappa dockerized
 
 ### Setup
 Clone and execute `configure` file in project root.
